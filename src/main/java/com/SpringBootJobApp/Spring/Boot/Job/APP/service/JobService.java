@@ -14,7 +14,6 @@ public class JobService {
         @Autowired
         public JobRepo repo;
 
-        // method to add a jobPost
         public void addJob(JobPost jobPost) {
             repo.addJob(jobPost);
 
