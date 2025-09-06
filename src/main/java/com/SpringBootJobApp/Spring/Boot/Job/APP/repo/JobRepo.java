@@ -32,10 +32,12 @@ public class JobRepo {
         return jobs;
     }
 
-    // method to save a job post object into arrayList
-    public void addJob(JobPost job) {
+    public boolean addJob(JobPost job) {
+        boolean exists = jobs.stream()
+                .anyMatch(j -> j.getPostId() == job.getPostId());
+        if (exists) return false;
         jobs.add(job);
-        System.out.println(jobs);
+        return true;
     }
 
     public void applyForJob(int jobId) {
