@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Application Successful</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             background-color: #f8f9fa;
@@ -36,6 +37,16 @@
             background-color: #dc3545;
             border-color: #dc3545;
             color: white;
+        }
+        .copyright {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .copyright i {
+            color: #dc3545;
         }
     </style>
 </head>
@@ -88,6 +99,10 @@
             </div>
         </div>
     </div>
+
+<div class="copyright">
+    <p> Copyright &copy; Sai Mahendra Penumakula. Made with <i class="fas fa-heart"></i> Spring Boot, Java, JSP, and Bootstrap</p>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
