@@ -90,4 +90,23 @@ public class JobController {
         return "appliedjobs";
     }
 
+        // Adding JSON response for a job
+//    @GetMapping("jobPost/{id}")
+//    @ResponseBody
+//    public JobPost viewJobPost(@PathVariable int id) {
+//        return jobService.getJobById(id);
+//    }
+
+    @GetMapping("jobdetail")
+    public String viewJobDetail(@RequestParam int id, Model model) {
+        JobPost job = jobService.getJobById(id);
+        if (job != null) {
+            model.addAttribute("job", job);
+            return "jobdetail";
+        } else {
+            // Handle case where job is not found
+            return "redirect:/viewalljobs";
+        }
+    }
+
 }
